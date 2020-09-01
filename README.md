@@ -22,5 +22,5 @@
   | content | more content | text |
   | more | more | more |
  
- This being  * created * on a ** Friday ** ~~ Saturday ~~
+ This being  *created* on a **Friday** ~~Saturday~~.
 CMSSW is software which is using on CMS experiment
