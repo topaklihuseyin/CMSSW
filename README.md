@@ -10,7 +10,7 @@ CMSSW is software which is using on CMS experiment
  - indented
    1. inner number
    2. outer number
-   3.three
+   3. &three&
    
    [This is the descrition](https://github.com/topaklihuseyin/CMSSW/edit/master/README.md)
    This paragraph has some `variable` inline code.
