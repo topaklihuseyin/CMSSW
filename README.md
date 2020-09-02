@@ -17,7 +17,6 @@ CMSSW is software which is using on CMS experiment
    
    ```html
     A paragraph example 
-   <p> A paragraph example </p>
    ```
    ```javascript
    let num =Math.random();
