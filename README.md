@@ -16,10 +16,10 @@ CMSSW is software which is using on CMS experiment
    This paragraph has some `variable` inline code.
    
    ```<html>
-    <body>
+    
     <p> A paragraph example </p> 
-    </body>
-    </html>
+    
+    
     ```
     
    ```javascript
