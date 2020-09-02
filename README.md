@@ -16,7 +16,7 @@ CMSSW is software which is using on CMS experiment
    This paragraph has some `variable` inline code.
    
    ```html
-   <p align="left"> This is a paragraph example but p should not see on the letter but it seen.</p> 
+   <p align="left">This is a paragraph example but p should not see on the letter but it seen.</p> 
    ```
    ```javascript
    let num =Math.random();
