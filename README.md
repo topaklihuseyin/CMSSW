@@ -15,9 +15,9 @@ CMSSW is software which is using on CMS experiment
    [This is the descrition](https://github.com/topaklihuseyin/CMSSW/edit/master/README.md)
    This paragraph has some `variable` inline code.
    
-   ```html 
-    < p > A paragraph example < /p > 
-    ```
+   ```<html> 
+    <p> A paragraph example </p> 
+    ```</html>
     
    ```javascript
    let num =Math.random();
