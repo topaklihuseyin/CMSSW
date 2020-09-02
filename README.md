@@ -16,11 +16,8 @@ CMSSW is software which is using on CMS experiment
    This paragraph has some `variable` inline code.
    
    ```html
-<<<<<<< HEAD
     A paragraph example 
-=======
    <p> A paragraph example </p>
->>>>>>> 3457bd697714e4cc66d3ebd2379280a13281d630
    ```
    ```javascript
    let num =Math.random();
