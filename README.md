@@ -28,7 +28,8 @@ CMS Data is arranged into a hierarchy of data tiers. Each physics event is writt
     - RECO can be used for analysis, but is too big for frequent or heavy use when CMS has collected a substantial data sample.
     
 3. AOD ("Analysis Object Data"): this is a "distilled" version of the RECO event information, and is expected to be used for most analyses.
-   - AOD provides a trade-off between event size and complexity of the available information to optimize flexibility and speed for analyses
+   - AOD provides a trade-off between event size and complexity of the available information to optimize flexibility and speed for analyses.
+The data tiers are described in more detail in a dedicated WorkBook chapter on [Data Formats and Tiers(https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats) 
 
 ## Analyzers
 
