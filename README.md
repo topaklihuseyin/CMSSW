@@ -37,12 +37,12 @@ The following diagram shows the flow of CMS detector data through the tiers.
 ![alt text](https://twiki.cern.ch/twiki/pub/CMSPublic/WorkBookComputingModel/dataflowtiers_Data.gif)
 The essential elements of the flow of real physics data through the hardware tiers are:
 - T0 to T1:
- - Scheduled, time-critical, will be continuous during data-taking periods
- - reliable transfer needed for fast access to new data, and to ensure that data is stored safely
+   - Scheduled, time-critical, will be continuous during data-taking periods
+   - reliable transfer needed for fast access to new data, and to ensure that data is stored safely
 - T1 to T1:
-  - redistributing data, generally after reprocessing (e.g. processing with improved algorithms)
+     - redistributing data, generally after reprocessing (e.g. processing with improved algorithms)
 -T1 to T2:
-  - Data for analysis at Tier-2s
+    - Data for analysis at Tier-2s
 
 ## Analyzers
 
