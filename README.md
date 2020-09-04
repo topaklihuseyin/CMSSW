@@ -12,7 +12,7 @@ The CMSSW executable, cmsRun, is configured at run time by the user's job-specif
 - how the events are filtered within each path, and
 - how the paths are connected to the output files
 
-Unlike the previous event processing frameworks, cmsRun is extremely lightweight: only the required modules are dynamically loaded at the beginning of the job.
+Unlike the previous event processing frameworks, cmsRun is extremely lightweight: only the required modules are dynamically loaded at the beginning of the job. More information can be found [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookCMSSWFramework).
 
 
 
