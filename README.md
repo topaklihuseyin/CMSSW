@@ -41,7 +41,7 @@ The essential elements of the flow of real physics data through the hardware tie
    - reliable transfer needed for fast access to new data, and to ensure that data is stored safely
 - T1 to T1:
      - redistributing data, generally after reprocessing (e.g. processing with improved algorithms)
--T1 to T2:
+- T1 to T2:
     - Data for analysis at Tier-2s
 
 ## Analyzers
