@@ -44,6 +44,12 @@ The essential elements of the flow of real physics data through the hardware tie
      - redistributing data, generally after reprocessing (e.g. processing with improved algorithms)
 - T1 to T2:
     - Data for analysis at Tier-2s
+    
+ #### Monte Carlo data flow through Hardware Tiers
+ Monte Carlo generated data is typically produced at a T2 center, and archived at its associated T1 and made available to the whole CMS collaboration. The following diagram shows the flow of Monte Carlo data through the tiers.
+ ![alt text](https://twiki.cern.ch/twiki/pub/CMSPublic/WorkBookComputingModel/dataflowtiers_MC.gif)
+ 
+    
 
 ## Analyzers
 
