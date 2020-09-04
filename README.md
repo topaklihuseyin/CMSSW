@@ -19,6 +19,8 @@ The CMS Event Data Model (EDM) is centered around the concept of an *Event*. Phy
 
 In software terms, an Event starts as a collection of the RAW data from a detector or MC event, stored as a single entity in memory, a C++ type-safe container called edm::Event. An Event is a C++ object container for all RAW and reconstructed data related to a particular collision. During processing, data are passed from one module to the next via the Event, and are accessed only through the Event. All objects in the Event may be individually or collectively stored in ROOT files, and are thus directly browsable in ROOT. This allows tests to be run on individual modules in isolation. Auxiliary information needed to process an Event is called Event Setup, and is accessed via the EventSetup.
 
+### The CMS Data Hierarchy 
+
 ## Analyzers
 
 
