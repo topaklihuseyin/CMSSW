@@ -6,6 +6,7 @@ The CMSSW event processing model consists of one executable, called cmsRun, and 
 
 The CMSSW executable, cmsRun, is configured at run time by the user's job-specific [configuration file](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookConfigFileIntro). This file tells cmsRun
 
+
 ## Data Model
 
 
