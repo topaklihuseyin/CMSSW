@@ -22,7 +22,7 @@ In software terms, an Event starts as a collection of the RAW data from a detect
 ### The CMS Data Hierarchy 
 CMS Data is arranged into a hierarchy of data tiers. Each physics event is written into each data tier, where the tiers each contain different levels of information about the event. The different tiers each have different uses. The three main data tiers written in CMS are:
 1. RAW: full event information from the Tier-0 (i.e. from CERN), containing 'raw' detector information (detector element hits, etc)
-   1. RAW is not used directly for analysis
+   - RAW is not used directly for analysis
 
 ## Analyzers
 
