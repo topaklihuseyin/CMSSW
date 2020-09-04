@@ -61,16 +61,11 @@ The essential elements of the flow of real physics data through the hardware tie
 
 
 
+### Examples  
 - First Title
-- Second Title
-- Third Title
  - indented
    1. inner number
-   2. outer number
-   3. three
-   
-   [This is the descrition](https://github.com/topaklihuseyin/CMSSW/edit/master/README.md)
-   This paragraph has some `variable` inline code.
+      This paragraph has some `variable` inline code.
    
    ```html
    <p align="left">This is a paragraph example but p should not see on the letter but it seen.</p> 
