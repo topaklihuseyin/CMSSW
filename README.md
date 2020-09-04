@@ -8,7 +8,7 @@ The CMSSW executable, cmsRun, is configured at run time by the user's job-specif
 - which data to use
 - which modules to execute
 - which parameter settings to use for each module
-- what is the order or the executions of modules, called `path`
+- what is the order or the executions of modules, called *path*
 - how the events are filtered within each path, and
 - how the paths are connected to the output files
 
