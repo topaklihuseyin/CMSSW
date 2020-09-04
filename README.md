@@ -32,6 +32,11 @@ CMS Data is arranged into a hierarchy of data tiers. Each physics event is writt
 
 The data tiers are described in more detail in a dedicated WorkBook chapter on [Data Formats and Tiers](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats). 
 
+#### Detector data flow through Hardware Tiers
+The following diagram shows the flow of CMS detector data through the tiers.
+(https://twiki.cern.ch/twiki/pub/CMSPublic/WorkBookComputingModel/dataflowtiers_Data.gif)
+
+
 ## Analyzers
 
 
