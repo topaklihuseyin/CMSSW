@@ -34,7 +34,7 @@ The data tiers are described in more detail in a dedicated WorkBook chapter on [
 
 #### Detector data flow through Hardware Tiers
 The following diagram shows the flow of CMS detector data through the tiers.
-(https://twiki.cern.ch/twiki/pub/CMSPublic/WorkBookComputingModel/dataflowtiers_Data.gif)
+![alt text](https://twiki.cern.ch/twiki/pub/CMSPublic/WorkBookComputingModel/dataflowtiers_Data.gif)
 
 
 ## Analyzers
