@@ -5,6 +5,12 @@ The overall collection of software, referred to as CMSSW, is built around a Fram
 The CMSSW event processing model consists of one executable, called cmsRun, and many plug-in modules which are managed by the Framework. All the code needed in the event processing (calibration, reconstruction algorithms, etc.) is contained in the modules. The same executable is used for both detector and Monte Carlo data.
 
 The CMSSW executable, cmsRun, is configured at run time by the user's job-specific [configuration file](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookConfigFileIntro). This file tells cmsRun
+- which data to use
+- which modules to execute
+- which parameter settings to use for each module
+- what is the order or the executions of modules, called `path`
+- how the events are filtered within each path, and
+- how the paths are connected to the output files
 
 
 ## Data Model
