@@ -52,6 +52,7 @@ The essential elements of the flow of real physics data through the hardware tie
     
 
 ## Analyzers
+First, a few general words about analysis in the CMSSW framework. Physics analysis proceeds via a series of subsequent steps. Building blocks are identified and more complex objects are built on top of them. For instance, the Higgs search H ->ZZ -> µµµµ requires:
 
 
 ## Configure
