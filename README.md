@@ -57,7 +57,9 @@ First, a few general words about analysis in the CMSSW framework. Physics analys
  - reconstructing Z candidates starting from muon candidates;
  - reconstructing Higgs candidates starting from Z candidates.
  
-This process clearly identifies three products: muon candidates, Z candidates, and a Higgs candidate, as well as three processes to reconstruct them. These are well mapped into three Framework modules (EDProducers) that add into the Event three different products (the candidates collections).
+This process clearly identifies three products: muon candidates, Z candidates, and a Higgs candidate, as well as three processes to reconstruct them. These are well mapped into three Framework modules (EDProducers) that add into the Event three different products (the candidates collections). For more information click [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule).
+
+
 
 
 ## Configure
