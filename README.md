@@ -154,7 +154,13 @@ process.demo = cms.EDAnalyzer('DemoAnalyzer'
 process.p = cms.Path(process.demo)
 ```
 
+Full documentation about the configuration language is in [SWGuideAboutPythonConfigFile](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAboutPythonConfigFile).
 
+Run the job
+
+```javascript
+cmsRun Demo/DemoAnalyzer/python/ConfFile_cfg.py
+```
 
 
 
