@@ -68,10 +68,10 @@ CMSSW distiguishes following [module types](https://twiki.cern.ch/twiki/bin/view
  - **EventSetup:** external service not bound to the event structure which provides information useable by all modules (e.g. Geometry, Magnetic Field, etc.)
   
   In order to generate above modules:
-   - mkedprod : makes a skeleton of a package containing an [EDProducer](https://twiki.cern.ch/twiki/bin/view/Main/CMSSWatFNALFramework#Module_types)
-   - mkedanlzr : makes a skeleton of a package containing an [EDAnalyzer](https://twiki.cern.ch/twiki/bin/view/Main/CMSSWatFNALFramework#Module_types) 
-  - mkedfltr : makes a skeleton of a package containing an [EDFilter](https://twiki.cern.ch/twiki/bin/view/Main/CMSSWatFNALFramework#Module_types)
-  -  mkrecord : makes a complete implementation of a Record used by the [EventSetup](https://twiki.cern.ch/twiki/bin/view/Main/CMSSWatFNALFramework#Module_types)
+   - **mkedprod :** makes a skeleton of a package containing an [EDProducer](https://twiki.cern.ch/twiki/bin/view/Main/CMSSWatFNALFramework#Module_types)
+   - **mkedanlzr :** makes a skeleton of a package containing an [EDAnalyzer](https://twiki.cern.ch/twiki/bin/view/Main/CMSSWatFNALFramework#Module_types) 
+  - **mkedfltr :** makes a skeleton of a package containing an [EDFilter](https://twiki.cern.ch/twiki/bin/view/Main/CMSSWatFNALFramework#Module_types)
+  -  **mkrecord :** makes a complete implementation of a Record used by the [EventSetup](https://twiki.cern.ch/twiki/bin/view/Main/CMSSWatFNALFramework#Module_types)
  
 ## Configure
 
