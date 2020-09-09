@@ -132,6 +132,29 @@ The **mkedanlzr** script has generated an example python configuration file Conf
 
 And now the configuration file should read like this:
 
+```javascript
+import FWCore.ParameterSet.Config as cms
+
+process = cms.Process("Demo")
+
+process.load("FWCore.MessageService.MessageLogger_cfi")
+
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
+
+process.source = cms.Source("PoolSource",
+                                # replace 'myfile.root' with the source file you want to use
+                                fileNames = cms.untracked.vstring(
+            'file:/afs/cern.ch/cms/Tutorials/TWIKI_DATA/TTJets_8TeV_53X.root'
+                )
+                            )
+
+process.demo = cms.EDAnalyzer('DemoAnalyzer'
+                              )
+
+process.p = cms.Path(process.demo)
+```
+
+
 
 
 
