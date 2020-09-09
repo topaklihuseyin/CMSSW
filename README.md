@@ -53,6 +53,11 @@ The essential elements of the flow of real physics data through the hardware tie
 
 ## Analyzers
 First, a few general words about analysis in the CMSSW framework. Physics analysis proceeds via a series of subsequent steps. Building blocks are identified and more complex objects are built on top of them. For instance, the Higgs search H ->ZZ -> µµµµ requires:
+ - identifying muon candidates;
+ - reconstructing Z candidates starting from muon candidates;
+ - reconstructing Higgs candidates starting from Z candidates.
+ 
+This process clearly identifies three products: muon candidates, Z candidates, and a Higgs candidate, as well as three processes to reconstruct them. These are well mapped into three Framework modules (EDProducers) that add into the Event three different products (the candidates collections).
 
 
 ## Configure
