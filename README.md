@@ -82,7 +82,8 @@ More generators are available and you can find them [here](https://twiki.cern.ch
 If you have an account on *lxplus* or *cmslpc* clusters, you can login one of these clusters using *ssh* command.
  - ssh -Y [yourusername]@lxplus.cern.ch  
  *make a your working directory*
- ```javascript
+
+```javascript
  mkdir MYDEMOANALYZER
  cd MYDEMOANALYZER
 ```
@@ -97,6 +98,18 @@ If you have an account on *lxplus* or *cmslpc* clusters, you can login one of th
 # check your arch - it should give an output as slc6_amd64_gcc491
    echo $SCRAM_ARCH
 ```
+```javascript
+ # create a new project area 
+ cmsrel CMSSW_7_4_15 
+ echo $0
+
+ cd CMSSW_7_4_15/src/ 
+ cmsenv
+ ```
+
+
+
+
 
 
 
