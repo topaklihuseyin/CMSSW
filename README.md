@@ -62,7 +62,6 @@ This process clearly identifies three products: muon candidates, Z candidates, a
 When setting up code for the new EDM (such as creating a new EDProducer) there is a fair amount of 'boiler plate' code that you must write. To make writing such code easier CMS provides a series of scripts that will generate the necessary directory structure and files needed so that all you need to do is write your actual algorithms.
 
 CMSSW distiguishes following [module types](https://twiki.cern.ch/twiki/bin/view/Main/CMSSWatFNALFramework#Module_types):
-
  - **EDAnalyzer:** takes input from the event and processes the input without writing information back to the event
  - **EDProducer:** takes input from the event and produces new output which is saved in the event
  - **EDFilter:** decides if processing the event can be stopped and continued
