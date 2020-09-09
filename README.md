@@ -128,7 +128,7 @@ scram b
 ```
 We'll use a ROOT file as the data source when we run with this module. The data source is defined in the configuration file. For your convenience, there is already a data file processed in **CMSSW_5_3_4**, which is fully compatible with **CMSSW_7_4_15** release, containing 100 events. It is located at `/afs/cern.ch/cms/Tutorials/TWIKI_DATA/TTJets_8TeV_53X.root`.
 
-The **mkedanlzr** script has generated an example python configuration file ConfFile_cfg.py in the **DemoAnalyzer/python** directory. Open the file using your favorite text editor and change the data source file to as shown below.
+The **mkedanlzr** script has generated an example python configuration file ConfFile_cfg.py in the **~DemoAnalyzer/python** directory. Open the file using your favorite text editor and change the data source file to as shown below.
 
 And now the configuration file should read like this:
 
