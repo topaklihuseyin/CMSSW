@@ -162,6 +162,171 @@ Run the job
 cmsRun Demo/DemoAnalyzer/python/ConfFile_cfg.py
 ```
 
+### Get tracks from the Event
+`Demo/DemoAnalyzer/plugins/DemoAnalyzer.cc` is the place to put your analysis code. In this example, we only add very simple statement printing the number of tracks.
+
+Edit `Demo/DemoAnalyzer/plugins/BuildFile.xml:` so that it looks like this
+```javascript
+<use name="FWCore/Framework"/>
+<use name="FWCore/PluginManager"/>
+<use name="FWCore/ParameterSet"/>
+<use name="DataFormats/TrackReco"/>
+<use name="CommonTools/UtilAlgos"/>
+<flags EDM_PLUGIN="1"/>
+```
+More on information on the structure of a typical `BuildFile.xml` can be found on [WorkBookBuildFilesIntro](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookBuildFilesIntro).
+
+Edit `Demo/DemoAnalyzer/plugins/DemoAnalyzer.cc`
+ - Add the following include statements (together with the other include statements):
+
+```javascript
+#include "DataFormats/TrackReco/interface/Track.h"
+#include "DataFormats/TrackReco/interface/TrackFwd.h"
+#include "FWCore/MessageLogger/interface/MessageLogger.h"
+```
+- Edit the method `analyze` which starts with
+
+```javascript
+DemoAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
+```
+and put the following lines below `using namespace edm;`
+
+```javascript
+Handle<reco::TrackCollection> tracks; 
+iEvent.getByLabel("generalTracks", tracks);
+LogInfo ("Demo") << "number of tracks " << tracks->size();
+```
+To see how to access data from a triggered or simulated physics event look at [SWGuideEDMGetDataFromEvent](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideEDMGetDataFromEvent).
+
+To know what other collections (besides `TrackCollection` of reconstructed objects are available, you can have a look to [SWGuideRecoDataTable](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideRecoDataTable).
+
+Now, compile the code and run the job again:
+
+ ```javascript
+ scram b
+ cmsRun Demo/DemoAnalyzer/python/ConfFile_cfg.py  
+  ```
+The output should look something like this:
+
+ ```javascript
+ [lxplus404 @ ~/workbook/MYDEMOANALYZER/CMSSW_5_3_5/src]$  cmsRun Demo/DemoAnalyzer/demoanalyzer_cfg.py
+12-Mar-2013 18:59:31 CET  Initiating request to open file file:/afs/cern.ch/cms/Tutorials/TTJets_RECO_5_3_4.root
+12-Mar-2013 18:59:36 CET  Successfully opened file file:/afs/cern.ch/cms/Tutorials/TTJets_RECO_5_3_4.root
+%MSG-i Root_Information:  AfterFile TClass::TClass() 12-Mar-2013 18:59:36 CET  pre-events
+no dictionary for class pair<edm::IndexIntoFile::IndexRunKey,Long64_t> is available
+%MSG
+%MSG-i Root_Information:  AfterFile TClass::TClass() 12-Mar-2013 18:59:36 CET  pre-events
+no dictionary for class pair<edm::IndexIntoFile::IndexRunLumiKey,Long64_t> is available
+%MSG
+%MSG-i Root_Information:  AfterFile TClass::TClass() 12-Mar-2013 18:59:36 CET  pre-events
+no dictionary for class pair<edm::BranchKey,edm::ConstBranchDescription> is available
+%MSG
+%MSG-i Root_Information:  AfterFile TClass::TClass() 12-Mar-2013 18:59:36 CET  pre-events
+no dictionary for class pair<edm::BranchID,unsigned int> is available
+%MSG
+Begin processing the 1st record. Run 1, Event 261746003, LumiSection 872662 at 12-Mar-2013 18:59:37.193 CET
+%MSG-i Demo:  DemoAnalyzer:demo 12-Mar-2013 18:59:37 CET Run: 1 Event: 261746003
+number of tracks 1211
+%MSG
+Begin processing the 2nd record. Run 1, Event 261746009, LumiSection 872662 at 12-Mar-2013 18:59:37.203 CET
+%MSG-i Demo:  DemoAnalyzer:demo 12-Mar-2013 18:59:37 CET Run: 1 Event: 261746009
+number of tracks 781
+%MSG
+Begin processing the 3rd record. Run 1, Event 261746010, LumiSection 872662 at 12-Mar-2013 18:59:37.206 CET
+%MSG-i Demo:  DemoAnalyzer:demo 12-Mar-2013 18:59:37 CET Run: 1 Event: 261746010
+number of tracks 1535
+
+...
+
+%MSG
+Begin processing the 48th record. Run 1, Event 261746140, LumiSection 872662 at 12-Mar-2013 18:59:38.129 CET
+%MSG-i Demo:  DemoAnalyzer:demo 12-Mar-2013 18:59:38 CET Run: 1 Event: 261746140
+number of tracks 544
+%MSG
+Begin processing the 49th record. Run 1, Event 261746141, LumiSection 872662 at 12-Mar-2013 18:59:38.134 CET
+%MSG-i Demo:  DemoAnalyzer:demo 12-Mar-2013 18:59:38 CET Run: 1 Event: 261746141
+number of tracks 662
+%MSG
+Begin processing the 50th record. Run 1, Event 261746142, LumiSection 872662 at 12-Mar-2013 18:59:38.135 CET
+%MSG-i Demo:  DemoAnalyzer:demo 12-Mar-2013 18:59:38 CET Run: 1 Event: 261746142
+number of tracks 947
+%MSG
+12-Mar-2013 18:59:38 CET  Closed file file:/afs/cern.ch/cms/Tutorials/TTJets_RECO_5_3_4.root
+
+TrigReport ---------- Event  Summary ------------
+TrigReport Events total = 50 passed = 50 failed = 0
+
+TrigReport ---------- Path   Summary ------------
+TrigReport  Trig Bit#        Run     Passed     Failed      Error Name
+TrigReport     1    0         50         50          0          0 p
+
+TrigReport -------End-Path   Summary ------------
+TrigReport  Trig Bit#        Run     Passed     Failed      Error Name
+
+TrigReport ---------- Modules in Path: p ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     1    0         50         50          0          0 demo
+
+TrigReport ---------- Module Summary ------------
+TrigReport    Visited        Run     Passed     Failed      Error Name
+TrigReport         50         50         50          0          0 demo
+TrigReport         50         50         50          0          0 TriggerResults
+
+TimeReport ---------- Event  Summary ---[sec]----
+TimeReport CPU/event = 0.002820 Real/event = 0.002912
+
+TimeReport ---------- Path   Summary ---[sec]----
+TimeReport             per event          per path-run 
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport   0.002800   0.002883   0.002800   0.002883 p
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport             per event          per path-run 
+
+TimeReport -------End-Path   Summary ---[sec]----
+TimeReport             per event       per endpath-run 
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport             per event       per endpath-run 
+
+TimeReport ---------- Modules in Path: p ---[sec]----
+TimeReport             per event      per module-visit 
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport   0.002800   0.002881   0.002800   0.002881 demo
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport             per event      per module-visit 
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport             per event      per module-visit 
+
+TimeReport ---------- Module Summary ---[sec]----
+TimeReport             per event        per module-run      per module-visit 
+TimeReport        CPU       Real        CPU       Real        CPU       Real Name
+TimeReport   0.002800   0.002881   0.002800   0.002881   0.002800   0.002881 demo
+TimeReport   0.000020   0.000025   0.000020   0.000025   0.000020   0.000025 TriggerResults
+TimeReport        CPU       Real        CPU       Real        CPU       Real Name
+TimeReport             per event        per module-run      per module-visit 
+
+T---Report end!
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 fileAction           -s file_close                             1        1
+    2 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 fileAction           PostEndRun                        
+    2 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+System                  3                   3  
+   ```
+
 
 
 ## Conditions Data
