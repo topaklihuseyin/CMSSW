@@ -77,6 +77,11 @@ More generators are available and you can find them [here](https://twiki.cern.ch
 
 
 ## Configure
+### Set up your Environment
+If you have an account on *lxplus* or *cmslpc* clusters, you can login one of these clusters using *ssh* command. To connect *lxplus* machines at CERN type;
+ - ssh -Y [yourusername]@lxplus.cern.ch or 
+
+
 
 
 ## Conditions Data
