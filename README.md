@@ -87,6 +87,17 @@ If you have an account on *lxplus* or *cmslpc* clusters, you can login one of th
  cd MYDEMOANALYZER
 ```
 
+```html
+# if output of echo $0 is csh or tcsh
+   setenv SCRAM_ARCH slc6_amd64_gcc491
+
+# if output of echo $0 is bash/sh
+   export SCRAM_ARCH=slc6_amd64_gcc491
+
+# check your arch - it should give an output as slc6_amd64_gcc491
+   echo $SCRAM_ARCH
+```
+
 
 
 ## Conditions Data
