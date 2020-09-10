@@ -207,7 +207,7 @@ Now, compile the code and run the job again:
  cmsRun Demo/DemoAnalyzer/python/ConfFile_cfg.py  
   ```
 The output should look something like this:
-
+<verbatim>
  ```javascript
  [lxplus404 @ ~/workbook/MYDEMOANALYZER/CMSSW_5_3_5/src]$  cmsRun Demo/DemoAnalyzer/demoanalyzer_cfg.py
 12-Mar-2013 18:59:31 CET  Initiating request to open file file:/afs/cern.ch/cms/Tutorials/TTJets_RECO_5_3_4.root
@@ -326,8 +326,7 @@ Severity    # Occurrences   Total Occurrences
 --------    -------------   -----------------
 System                  3                   3  
    ```
-
-
+<\verbatim>
 
 ## Conditions Data
 
