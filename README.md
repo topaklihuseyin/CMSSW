@@ -207,7 +207,7 @@ Now, compile the code and run the job again:
  cmsRun Demo/DemoAnalyzer/python/ConfFile_cfg.py  
   ```
 The output should look something like this:
-<verbatim>
+
  ```javascript
  [lxplus404 @ ~/workbook/MYDEMOANALYZER/CMSSW_5_3_5/src]$  cmsRun Demo/DemoAnalyzer/demoanalyzer_cfg.py
 12-Mar-2013 18:59:31 CET  Initiating request to open file file:/afs/cern.ch/cms/Tutorials/TTJets_RECO_5_3_4.root
@@ -235,9 +235,7 @@ number of tracks 781
 Begin processing the 3rd record. Run 1, Event 261746010, LumiSection 872662 at 12-Mar-2013 18:59:37.206 CET
 %MSG-i Demo:  DemoAnalyzer:demo 12-Mar-2013 18:59:37 CET Run: 1 Event: 261746010
 number of tracks 1535
-
 ...
-
 %MSG
 Begin processing the 48th record. Run 1, Event 261746140, LumiSection 872662 at 12-Mar-2013 18:59:38.129 CET
 %MSG-i Demo:  DemoAnalyzer:demo 12-Mar-2013 18:59:38 CET Run: 1 Event: 261746140
@@ -252,7 +250,6 @@ Begin processing the 50th record. Run 1, Event 261746142, LumiSection 872662 at 
 number of tracks 947
 %MSG
 12-Mar-2013 18:59:38 CET  Closed file file:/afs/cern.ch/cms/Tutorials/TTJets_RECO_5_3_4.root
-
 TrigReport ---------- Event  Summary ------------
 TrigReport Events total = 50 passed = 50 failed = 0
 
@@ -307,7 +304,6 @@ TimeReport             per event        per module-run      per module-visit
 
 T---Report end!
 
-
 =============================================
 
 MessageLogger Summary
@@ -326,7 +322,7 @@ Severity    # Occurrences   Total Occurrences
 --------    -------------   -----------------
 System                  3                   3  
    ```
-<\verbatim>
+
 
 ## Conditions Data
 
