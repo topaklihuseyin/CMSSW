@@ -109,7 +109,7 @@ If you have an account on *lxplus* or *cmslpc* clusters, you can login one of th
 
 ### Write a Framework Module
 
-First, create a subsystem area. The actual name used for the directory is not important, we'll use Demo. For more information click [here(https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule)] From the src directory, make and change to the Demo area:
+First, create a subsystem area. The actual name used for the directory is not important, we'll use Demo. For more information click [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWriteFrameworkModule). From the src directory, make and change to the Demo area:
 
 ```javascript
 mkdir Demo
