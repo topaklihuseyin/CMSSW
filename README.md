@@ -429,6 +429,23 @@ When a global tag requires more than one tag for a given record type, the payloa
 ```
 
 
+### Alternative method using `es_prefer`
+
+An alternative method for global tag customization is to use es_prefer: In this case, an es_source is added to the cfg to define the alternative conditions to be used, followed by an es_prefer statement to indicate that this es_source should take precedence over any other source for that condition object (in particular, the global tag). **The advantage of this method is that all parameters are tracked, whereas the connect string is untracked in the above approach.** The equivalent of the second example above would be:
+
+```html
+ from CondCore.CondDB.CondDB_cfi import *
+process.CondDB.connect = 'sqlite_file:myAlignments.db"'
+process.trackerAlignment = cms.ESSource("PoolDBESSource",CondDB,
+                                        toGet = cms.VPSet(cms.PSet(record = cms.string("TrackerAlignmentRcd"),
+                                                                   tag = cms.string("Alignments")),
+                                                          cms.PSet(record = cms.string("TrackerAlignmentErrorRcd"),
+                                                                   tag = cms.string("AlignmentErrors"))
+                                                          )
+                                        )
+process.es_prefer_trackerAlignment = cms.ESPrefer("PoolDBESSource","trackerAlignment")
+```
+
 
 
 #### Examples  
