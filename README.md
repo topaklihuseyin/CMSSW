@@ -379,6 +379,57 @@ Alternatively, you can search for the global tag in the cfg.py file, e.g.:
  process.GlobalTag.globaltag = "80X_mcRun2_asymptotic_2016_miniAODv2_v1"
    ```
 
+### Analysis recipes
+
+The recommendation of which global tag (together with other ingredients) should be used to analyze a specific dataset is best found in the [analysis recipe](https://twiki.cern.ch/twiki/bin/view/CMS/PdmV#Analysis_Recipe) page maintained by the PdmV team.
+
+#### Customization of Global Tags
+
+You may want to use an existing global tag with a modification to one or more of the conditions defined within it. For example, when running muon alignment, it is desirable to use the very latest tracker alignment conditions, which may not yet be in a published global tag, or to use a particular misalignment scenario which is not included in an existing MC global tag.
+
+
+The following example shows a configuration in which the tag `Early900GeVCollision_7p4cm_STARTUP_mc`, read from the production database, is used for the beamspot, replacing whatever beamspot is specified in the global tag:
+
+ ```html
+ process.GlobalTag.toGet = cms.VPSet(
+  cms.PSet(record = cms.string("BeamSpotObjectsRcd"),
+           tag = cms.string("Early900GeVCollision_7p4cm_STARTUP_mc"),
+           connect = cms.string("frontier://FrontierProd/CMS_CONDITIONS")
+          )
+)  
+```
+
+The following example shows a configuration in which the tags for `TrackerAlignmentRcd` and `TrackerAlignmentErrorRcd` are taken from an sqlite file, in place of whatever tags are specified for those records in the global tag:
+
+ ```html
+   process.GlobalTag.toGet = cms.VPSet(
+  cms.PSet(record = cms.string("TrackerAlignmentRcd"),
+           tag = cms.string("Alignments"),
+           connect = cms.string("sqlite_file:myAlignments.db")
+          ),
+  cms.PSet(record = cms.string("TrackerAlignmentErrorRcd"),
+           tag = cms.string("AlignmentErrors"),
+           connect = cms.string("sqlite_file:myAlignments.db")
+          )
+)
+```
+
+The set of mis-alignment scenario tags for each release can be found [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAlignmentConstants?redirectedfrom=CMS.SWGuideAlignmentConstants#Constants_for_Monte_Carlo).
+
+When a global tag requires more than one tag for a given record type, the payloads corresponding to the tag are identified by also specifying a label. The labels can be specified as follows:
+
+```html
+ process.GlobalTag.toGet = cms.VPSet(
+  cms.PSet(record = cms.string("AK4CaloHLT"),
+           tag = cms.string("JetCorrectorParametersCollection_HLT_BX25_83X_MC_v1_AK4CaloHLT"),
+           label = cms.untracked.string('AK4CaloHLT'),
+           connect = cms.string("frontier://FrontierProd/CMS_CONDITIONS)
+          )
+)
+```
+
+
+
 
 #### Examples  
 - First Title
