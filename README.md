@@ -354,6 +354,7 @@ There are 2 main ways to access the content of a Global Tag:
 
  - **web interface** for browsing and monitoring the changes to a Global Tag is available:
    - [https://cms-conddb.cern.ch/cmsDbBrowser](https://cms-conddb.cern.ch/cmsDbBrowser/index/Prod)
+   - [The CMS Conditions Database Browser Service](https://twiki.cern.ch/twiki/bin/viewauth/CMS/CmsDbBrowser) 
  - **command line tool:** the following script can also be run to examine the contents of a global tag
    ```javascript
    cmsenv
