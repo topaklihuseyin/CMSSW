@@ -348,6 +348,14 @@ For example, for a CMSSW job to process simulated dataset produced in the RunIIS
   ```
 Note that the global tag to be used should always be explicitly specified.
 
+### Browsing the Global Tag content
+
+There are 2 main ways to access the content of a Global Tag:
+
+ - **web interface** for browsing and monitoring the changes to a Global Tag is available:
+   - [https://cms-conddb.cern.ch/cmsDbBrowser](https://cms-conddb.cern.ch/cmsDbBrowser/index/Prod)
+
+
 #### Examples  
 - First Title
  - indented
