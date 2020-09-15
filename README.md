@@ -329,7 +329,9 @@ System                  3                   3
 
 ## Conditions Data
 
+### Introduction
 
+Conditions data for consumption in CMSSW are defined in the [Offline Conditions Database](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideCondDB), which is read in CMSSW applications via [Frontier](https://twiki.cern.ch/twiki/bin/view/CMS/DatabaseAccess) caching servers.
 
 
 #### Examples  
