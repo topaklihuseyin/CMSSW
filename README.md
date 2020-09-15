@@ -359,6 +359,26 @@ There are 2 main ways to access the content of a Global Tag:
    cmsenv
    conddb list TAGNAME
    ```
+### How to find out which conditions were used in an existing reconstructed dataset
+#### Tier0 datasets:
+
+You can refer to the table [Global Tags for Data Taking](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideFrontierConditions?redirectedfrom=CMS.SWGuideFrontierConditions#Global_Tags_for_Data_Taking) in this page.
+
+#### Other datasets:
+You can query DBS with:
+ ```html
+  dbs search --query='find dataset.tag where dataset=/MyFavorite/Dataset/RECO' 
+   ```
+For Monte Carlo production, and for skims and reprocessed data, the name of the global tag for conditions is included in the DBS dataset name. For example:
+```html
+ /Zmumu/CSA08_CSA08_S156_v1/GEN-SIM-RECO  
+   ```
+Alternatively, you can search for the global tag in the cfg.py file, e.g.:
+
+```html
+ process.GlobalTag.globaltag = "80X_mcRun2_asymptotic_2016_miniAODv2_v1"
+   ```
+
 
 #### Examples  
 - First Title
