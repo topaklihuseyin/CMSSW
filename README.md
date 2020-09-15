@@ -331,8 +331,22 @@ System                  3                   3
 
 ### Introduction
 
-Conditions data for consumption in CMSSW are defined in the [Offline Conditions Database](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideCondDB), which is read in CMSSW applications via [Frontier](https://twiki.cern.ch/twiki/bin/view/CMS/DatabaseAccess) caching servers.
+Conditions data for consumption in CMSSW are defined in the [Offline Conditions Database](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideCondDB), which is read in CMSSW applications via [Frontier](https://twiki.cern.ch/twiki/bin/view/CMS/DatabaseAccess) caching servers. For more information click [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideFrontierConditions).
 
+
+The set of database tags which together define the offline conditions data are collected together in a Global Tag, which is itself stored in the database. This removes the need for the list of database tags to be defined in separate cffs and therefore decouples the conditions database from the CMSSW release; different Global Tags can be used with a given CMSSW release, with the tag itself specified in the cfg file.
+
+It is then necessary to specify which global tag is to be used, as follows:
+ ```javascript
+  process.GlobalTag.globaltag = 'GlobalTagName' 
+   ```
+For example, for a CMSSW job to process simulated dataset produced in the RunIISpring16DR8 80X campaign, you need to :
+
+ ```javascript
+ from Configuration.AlCa.GlobalTag import GlobalTag
+ process.GlobalTag.globaltag = '80X_mcRun2_asymptotic_2016_miniAODv2_v1' 
+  ```
+Note that the global tag to be used should always be explicitly specified.
 
 #### Examples  
 - First Title
