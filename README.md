@@ -447,6 +447,8 @@ process.trackerAlignment = cms.ESSource("PoolDBESSource",CondDB,
 process.es_prefer_trackerAlignment = cms.ESPrefer("PoolDBESSource","trackerAlignment")
 ```
 
+### Global Tags
+Global tags can be found [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideFrontierConditions?sortcol=0;table=54;up=0#sorted_table).
 
 
 #### Examples  
