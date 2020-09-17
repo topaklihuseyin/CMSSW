@@ -55,10 +55,8 @@ This virtual machine image provides CMS computing environment to be used with th
 #### Docker
 As an alternative to using a virtual machine, you can run analysis code in a [Docker](https://www.docker.com/). If you want use Docker for analysis, [instructions for 2011/2012 data](http://opendata.cern.ch/docs/cms-guide-docker).    
 
-
-
 ## Configure
-
+A configuration document, written using the Python language, is used to configure the cmsRun executable. A Python configuration program specifies which modules, inputs, outputs and services are to be loaded during execution, how to configure these modules and services, and in what order to execute them. All information can be found at [twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAboutPythonConfigFile](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAboutPythonConfigFile). 
 
 
 ## Conditions Data
