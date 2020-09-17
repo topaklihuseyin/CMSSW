@@ -28,25 +28,7 @@ CMS Data is arranged into a hierarchy of data tiers. Each physics event is writt
     - [AOD Data Format Table](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAodDataTable)
 
 The data tiers are described in more detail in a dedicated WorkBook chapter on [Data Formats and Tiers](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats). 
-
-#### Detector data flow through Hardware Tiers
-The following diagram shows the flow of CMS detector data through the tiers.
-![alt text](https://twiki.cern.ch/twiki/pub/CMSPublic/WorkBookComputingModel/dataflowtiers_Data.gif)
-The essential elements of the flow of real physics data through the hardware tiers are:
-- T0 to T1:
-   - Scheduled, time-critical, will be continuous during data-taking periods
-   - reliable transfer needed for fast access to new data, and to ensure that data is stored safely
-- T1 to T1:
-     - redistributing data, generally after reprocessing (e.g. processing with improved algorithms)
-- T1 to T2:
-    - Data for analysis at Tier-2s
-    
- #### Monte Carlo data flow through Hardware Tiers
- Monte Carlo generated data is typically produced at a T2 center, and archived at its associated T1 and made available to the whole CMS collaboration. The following diagram shows the flow of Monte Carlo data through the tiers.
- ![alt text](https://twiki.cern.ch/twiki/pub/CMSPublic/WorkBookComputingModel/dataflowtiers_MC.gif)
- 
-    
-
+  
 ## Analyzers
 First, a few general words about analysis in the CMSSW framework. Physics analysis proceeds via a series of subsequent steps. Building blocks are identified and more complex objects are built on top of them. For instance, the Higgs search H ->ZZ -> µµµµ requires:
  - identifying muon candidates;
