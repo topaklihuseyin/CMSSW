@@ -203,26 +203,3 @@ process.GlobalTag.globaltag = 'START53_V27::All'
 ```
 
 
-
-
-#### Examples  
-- First Title
- - indented
-   1. inner number
-      This paragraph has some `variable` inline code.
-   
-   ```html
-   <p align="left">This is a paragraph example but p should not see on the letter but it seen.</p> 
-   ```
-   ```javascript
-   let num =Math.random();
-   ```
-   ![alt text](http://picsum.photos/200/200)
-   >block quote text below the paragraf
-   
-  | heading | header | head |
-  | --- | --- | --- |
-  | content | more content | text |
-  | more | more | more |
- 
- This being  *created* on a **Friday** ~~Saturday~~.
