@@ -49,6 +49,8 @@ CMSSW distiguishes following [module types](https://twiki.cern.ch/twiki/bin/view
 More generators are available and you can find them [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideSkeletonCodeGenerator) 
 
 ### Getting Started with CMS 2011/2012 Open Data
+This virtual machine image provides CMS computing environment to be used with the 2011 and 2012 CMS open data. The virtual machine is based on the CernVM (cernvm.cern.ch) and uses Scientific Linux CERN. All information about the CMS virtual machine can be found [opendata.cern.ch/record/252](http://opendata.cern.ch/record/252).
+
 
 
 ## Configure
