@@ -48,13 +48,6 @@ CMSSW distiguishes following [module types](https://twiki.cern.ch/twiki/bin/view
    
 More generators are available and you can find them [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideSkeletonCodeGenerator) 
 
-### Getting Started with CMS 2011/2012 Open Data
-
-#### Cern VM
-This virtual machine image provides CMS computing environment to be used with the 2011 and 2012 CMS open data. The virtual machine is based on the CernVM (cernvm.cern.ch) and uses Scientific Linux CERN. All information about the CMS virtual machine can be found at [opendata.cern.ch/record/252](http://opendata.cern.ch/record/252).
-#### Docker
-As an alternative to using a virtual machine, you can run analysis code in a [Docker](https://www.docker.com/). If you want use Docker for analysis, [instructions for 2011/2012 data](http://opendata.cern.ch/docs/cms-guide-docker).    
-
 ## Configure
 A configuration document, written using the Python language, is used to configure the cmsRun executable. A Python configuration program specifies which modules, inputs, outputs and services are to be loaded during execution, how to configure these modules and services, and in what order to execute them. All information can be found at [twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAboutPythonConfigFile](https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideAboutPythonConfigFile). 
 
